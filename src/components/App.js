@@ -3,7 +3,8 @@ import Section from "./Section/Section";
 import ContactForm from "./ContactForm/ContactForm";
 import ContactList from "./ContactList/ContactList";
 import Filter from "./Filter/Filter";
-import helper from "../LocalStorage/LocalStorage";
+import localStorage from "../LocalStorage/LocalStorage";
+import styles from './App.css';
 
 
 
@@ -55,16 +56,16 @@ class App extends Component {
   };
 
   componentDidMount() {
-    if (helper.get("contacts")) {
+    if (localStorage.get("contacts")) {
       this.setState({
-        contacts: [...helper.get("contacts")],
+        contacts: [...localStorage.get("contacts")],
       });
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.contacts !== this.state.contacts) {
-      helper.save("contacts", this.state.contacts);
+      localStorage.save("contacts", this.state.contacts);
     }
   }
 
@@ -72,7 +73,8 @@ class App extends Component {
     const { contacts } = this.state;
     return (
       <>
-        <Section title="Phonebook">
+        <Section clasName={styles.title}
+        title="Phonebook">
           <ContactForm addContact={this.addContact} />
         </Section>
         <Section title="Contacts">

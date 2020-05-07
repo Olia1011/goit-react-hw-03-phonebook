@@ -1,12 +1,73 @@
 .contactForm * {
     margin-bottom: 10px;
+    margin-left: 5px;
     display: block;
+    width: 200px;
+    border-radius: 8px;
+    padding-left: 5px;
+    outline: none;
+    
   }
 
   .btn {
-    border-radius: 5px;
-  }
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    margin-top: 35px;
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: hsl(212, 83%, 15%);
+    text-shadow: rgba(255,255,255,.5) 0 -1px 0, rgba(0,0,0,.2) 0 .18em .15em;
+    text-decoration: none;
+    user-select: none;
+    margin: .5em;
+    padding: .5em .6em .4em .6em;
+    border-radius: 8px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    outline: none;
+    background: #b6eeff radial-gradient(rgba(255,255,255,0), rgba(255,255,255,.5));
+    box-shadow:
+    inset rgba(255,255,255,.6) 0 .3em .3em,
+    inset rgba(0,0,0,.2) 0 -.1em .3em,
+    rgb(155, 176, 179) 0 7px 1px,
+    rgba(0,0,0,.2) 0 .5em 5px;
+    transition: background .2s ease-in-out;
+    }
   
-  .btn:hover{
-    background-color: rgb(23, 151, 255);    
+  .btn:hover {
+      cursor: pointer;
+      background-color: hsl(184, 71%, 47%);
+    }
+  
+  .btn:active {
+      top: .2em;
+      color: rgba(254,255,255,.9);
+      text-shadow: rgba(0,0,0,.2) 0 1px 2px;
+      box-shadow:
+       inset rgba(255,255,255,.6) 0 .3em .3em,
+       inset rgba(0,0,0,.2) 0 -.1em .3em,
+       rgba(0,0,0,.4) 0 .1em 1px,
+       rgba(0,0,0,.3) 0 .2em 6px;
+    }
+  
+  .btn:after {
+      content:  "";
+      position:  absolute; 
+      width:   90%;
+      height:  60%;
+      top:   0;
+      left:   5%;    
+      border-radius:    .5em .5em 1em 1em / .5em .5em 2em 2em;
+      background-image: linear-gradient(rgba(255,255,255,.55), rgba(255,255,255,.3)); 
+    }
+  
+  .btn:active:after {
+      opacity: 0.6;
+    }
+  
+  .btn:focus {
+    outline: none;
   }

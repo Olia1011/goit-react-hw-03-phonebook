@@ -41,7 +41,7 @@ class ContactForm extends Component {
     const { name, number } = this.state;
     return (
       <form onSubmit={this.submitHandler} className={styles.contactForm}>
-        <label htmlFor="nameInput">
+        <label className="label">
           Name:
           <input
             type="text"
@@ -53,7 +53,7 @@ class ContactForm extends Component {
           />
         </label>
 
-        <label htmlFor="numberInput">
+        <label className="label">
           Number:
           <input
             type="tel"
