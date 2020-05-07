@@ -1,0 +1,7 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1 px solid black;
+    padding: 12px, 24px;
+  }

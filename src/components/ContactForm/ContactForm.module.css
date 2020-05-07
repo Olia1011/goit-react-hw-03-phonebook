@@ -1,0 +1,12 @@
+.contactForm * {
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .btn {
+    border-radius: 5px;
+  }
+  
+  .btn:hover{
+    background-color: rgb(23, 151, 255);    
+  }
